@@ -1,0 +1,14 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+div[class^='col-'] {
+  text-align: justify;
+  margin-top: 14px; }
+  div[class^='col-'] div {
+    background-color: greenyellow;
+    min-height: 50px; }
+
+/*# sourceMappingURL=main.css.map */
