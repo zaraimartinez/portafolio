@@ -5622,7 +5622,7 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-/*Comienzo deProyecto*/
+/*Comienzo de Proyecto*/
 html,
 body {
   width: 100%;
@@ -5700,24 +5700,40 @@ ul li a:hover {
 
 /*Fin del Menu Nav*/
 /*banner*/
-.portada {
-  background: url(../img/banner9.jpg) no-repeat center center scroll;
-  display: table;
-  width: 100%;
-  height: 100%;
+.home {
+  background: url(../img/banner9.jpg) scroll;
+  /*display: table;*/
+  /*width: 100%;*/
+  min-height: 100%;
   background-size: cover;
-  position: relative; }
+  /*position: relative;*/
+  /*opacity: 0.6;	*/ }
 
-.portada img {
+.titulo h2 {
+  font-size: 50px; }
+
+.titulo {
+  display: table-cell;
+  vertical-align: middle;
+  color: white;
+  /*text-align: center;*/
+  font-family: 'Ubuntu Condensed', sans-serif; }
+
+.titulo p {
+  font-family: 'Ubuntu Condensed', sans-serif;
+  color: white;
+  /*display: table-cell;*/
+  /*vertical-align: middle;*/
+  padding-bottom: 100px;
+  /*text-decoration: none;*/
+  font-size: 20px;
+  padding-right: 118px;
   width: 100%; }
 
-.portada .overlay {
+.home .overlay {
+  transition: 0.8s ease-in-out;
   background-color: rgba(15, 14, 11, 0.4);
-  display: table;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  position: relative; }
+  min-height: 100%; }
 
 .boton {
   border: 5px solid rgba(245, 23, 120, 0.9);
@@ -5740,31 +5756,12 @@ ul li a:hover {
 a:hover {
   text-decoration: none; }
 
-.titulo h2 {
-  font-size: 50px; }
-
-.titulo {
-  display: table-cell;
-  vertical-align: middle;
-  color: white;
-  text-align: center;
-  font-family: 'Ubuntu Condensed', sans-serif; }
-
-.titulo p {
-  font-family: 'Ubuntu Condensed', sans-serif;
-  color: white;
-  /*display: table-cell;*/
-  vertical-align: middle;
-  padding-bottom: 100px;
-  /*text-decoration: none;*/
-  font-size: 20px;
-  padding-right: 118px;
-  width: 100%; }
-
 /*sobre mi*/
-.sobremi {
-  padding: 42px;
+.about-me {
   background-color: #0D8EDE; }
+
+.sobremi {
+  padding: 42px; }
 
 .me {
   /*padding-top: 20px;*/
@@ -5855,6 +5852,7 @@ h3 {
   width: 100%;
   height: 251px;
   top: 0;
+  display: table;
   /*background-color: rgba(107, 231, 248, 0.3)*/
   /*padding: 0 1px;*/ }
 
