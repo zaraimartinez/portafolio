@@ -1,50 +1,62 @@
 /*Comienzo de Proyecto*/
 
+
  html,
  body{
  	width: 100%;
  	height: 100%;
  }
 
-[class*="col-"] {
-	padding: 0px;
-	margin: 0px;
+@font-face{
+	font-family:CaviarBold;
+	src:url(../Fuente/CaviarBold.ttf)
 }
-.container-fluid {
-	padding: 0px;
+ h1, h3{
+ 	font-family: 'Great Vibes', cursive;
+ }
+
+
+// h2, p, ul{
+// 	font-family: 'Josefin Slab', serif;
+// }
+
+h2{
+	font-family:'CaviarBold';
 }
-.row{
-	padding: 0px;
-	margin: 0px;
+
+@font-face{
+	font-family:CaviarDreams;
+	src:url(../Fuente/CaviarDreams.ttf);
 }
-/*Navegación*/
-/*.logo a{
-	border:3px solid white;
-}*/
+ul, a, p{
+	font-family:'CaviarDreams';
+}
 .navbar {
 	margin-bottom: 0px;
+	border:none;
 }
 .navbar-default{
 	background-color: transparent;
 	border-color:transparent;
 	border-radius: 0px;
 	position: fixed;
-  z-index: 100;
-  width: 100%;
+	z-index: 100;
+	width: 100%;
 }
 ul.nav.navbar-nav {
-  float: none;
-  margin: 0;
-  text-align: right;
-  font-family: 'Ubuntu Condensed', sans-serif;
+	float: none;
+	margin: 0;
+	text-align: right;
+  // font-family: 'Ubuntu Condensed', sans-serif;
 }
 .navbar-nav > li {
 	float: none;
-  display: inline-block;
+	display: inline-block;
 }
 
 .navbar-default .navbar-nav > li > a{
 	color: white;
+	font-size:20px;
 }
 .navbar-nav > li > a{
 	margin: 0px 40px;
@@ -55,7 +67,7 @@ ul.nav.navbar-nav {
 	margin-left:56px;
 	/*border: 3px solid white;*/
 	position: relative;
-	font-family: 'Cinzel Decorative', cursive;
+	// font-family: 'Cinzel Decorative', cursive;
 }
 
 /*scroll*/
@@ -90,37 +102,44 @@ ul li a:hover {
 	/*width: 100%;*/
 	min-height: 100%;
 	background-size: cover;
+  background-attachment: fixed;
 	/*position: relative;*/
 	/*opacity: 0.6;	*/
 
 }
-.titulo h2 {
+.titulo h1 {
 	font-size: 110px;
+	// font-family: 'Great Vibes', cursive;
 }
 .titulo {
 	display: table-cell;
 	vertical-align: middle;
 	color: white;
 	/*text-align: center;*/
-	font-family: 'Ubuntu Condensed', sans-serif;
+	// font-family: 'Ubuntu Condensed', sans-serif;
 }
 .titulo p {
-	font-family: 'Ubuntu Condensed', sans-serif;
+	// font-family: 'Ubuntu Condensed', sans-serif;
 	color: white;
 	/*display: table-cell;*/
 	/*vertical-align: middle;*/
 	padding-bottom: 100px;
 	/*text-decoration: none;*/
-	font-size: 20px;
+	font-size: 28px;
 	padding-right: 118px;
 	width: 100%;
 	}
 
+.titulo h1:hover{
+	color:#337ab7;
+	transition: 0.8s  ease-in-out;
+}
 .home .overlay {
-		transition: 0.8s ease-in-out;
+	transition: 0.8s ease-in-out;
 	background-color: rgba(15, 14, 11, 0.4);
 
 	min-height: 100%;
+
 
 }
 
@@ -130,21 +149,23 @@ ul li a:hover {
 	font-size: 20px;
 	color: #337ab7;
 	background-color: rgba(242, 236, 236, 0.5);
-	font-family: 'Ubuntu Condensed', sans-serif;
+	font-weight:bold;
+	// font-family: 'Ubuntu Condensed', sans-serif;
 }
 
 .boton a {
 	color: white;
-	font-family: 'Ubuntu Condensed', sans-serif;
+	// font-weight:bold;
+	// font-family: 'Ubuntu Condensed', sans-serif;
 
 }
 
 .boton:hover{
-	font-family: 'Ubuntu Condensed', sans-serif;
+	// font-family: 'Ubuntu Condensed', sans-serif;
 	color: rgba(245, 23, 120, 0.9);
 	background-color: transparent;
-	  transition: height 0.3s, opacity 0.3s, transform 0.3s;
-	}
+	transition: height 0.3s, opacity 0.3s, transform 0.3s;
+}
 
 a:hover{ 
 	text-decoration: none;
@@ -154,7 +175,7 @@ a:hover{
 
 /*sobre mi*/
 .about-me{
-  background-color: #0D8EDE;
+	background-color: #0D8EDE;
 
 }
 .sobremi {
@@ -163,7 +184,7 @@ a:hover{
 .me {
 	/*padding-top: 20px;*/
 	text-align: center;
-	font-family: 'Ubuntu Condensed', sans-serif;
+	// font-family: 'Ubuntu Condensed', sans-serif;
 }
 
 .me h2{
@@ -204,12 +225,11 @@ a:hover{
 
 .aboutme p {
 	text-align: center;
-  color: white;
-  font-size: 18px;
-  margin-top: 35px;
-  padding-top: 35px;
-  font-family: 'Ubuntu Condensed', sans-serif;
-  padding-left: 0px;
+	color: white;
+	font-size: 18px;
+	margin-top: 35px;
+	padding-top: 35px;
+	padding-left: 0px;
 }
 
 /*project*/
@@ -218,28 +238,25 @@ a:hover{
 	padding: 20px;
 }
 .project h2, .blog h2, .contanct h2{
-	font-family: 'Ubuntu Condensed', sans-serif;
 	text-align: center;	
 	color: #0D8EDE;
+	font-weight:bold;
 }
 
 .project p {
-  font-family: 'Ubuntu Condensed', sans-serif;
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  padding: 50px;
-  width: 58%;
-  color: #0D8EDE;
-  font-size: 18px;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	padding: 50px;
+	width: 58%;
+	color: #0D8EDE;
+	font-size: 18px;
 }
 
 .project1 {
 	position: relative;
 	border: 5px solid #0D8EDE;
 	width: 93%;
-	/*margin: 0 auto;*/
-/*padding: 10px;*/
 }
 
 h3 {
@@ -253,9 +270,11 @@ h3 {
 	-o-transition: all 0.2s ease-in-out;
 	-ms-transition: all 0.2s ease-in-out;
 }
+
 .overlay:hover h3  {
 	visibility: visible;
 }
+
 .overlay {
 	position: absolute;
 	width: 100%;
@@ -286,11 +305,6 @@ h3 {
 .blog {
 	/*padding: 20px;*/
 }
-.blog h2{
-	font-family: 'Ubuntu Condensed', sans-serif;
-	text-align: center;	
-	color: #0D8EDE;
-}
 
 .line3{
 	border-bottom: 1px solid #0D8EDE;
@@ -300,11 +314,7 @@ h3 {
 
 }
 .coment {
-	/*width: 35%;*/
-	/*margin-left: 40px;*/
-	/*padding:60px 20px 2px;*/
 	padding:30px;
-	/*margin: 36px;*/
 }
 
 .coment img{
@@ -326,28 +336,24 @@ h3 {
 	position: relative;
 	background-color: rgb(174, 218, 245);
 	padding: 10px;
-
-
 }
 .parrafo h4 {
 	margin-top: 0px;
 }
 .parrafo h4,
 p {
-	font-family: 'Ubuntu Condensed', sans-serif;
 	color: gray;
 	padding-left: 120px;
-	/*padding-top: 10px;*/
 }
 /*contactos*/
-.contactame h2{
-	font-family: 'Great Vibes', cursive;
+.contactame h3{
+	
 	text-align: left;
-  margin-left: 121px;
+	margin-left: 121px;
+	color:blue;
 }
 .contact{
 	border: 1px solid #0D8EDE;
-	font-family: 'Ubuntu Condensed', sans-serif;
 	margin: 33px;
 }
 
@@ -384,7 +390,7 @@ input {
 }
 
 input[type="text"] {
-	font-family: 'Ubuntu Condensed', sans-serif;
+	// font-family: 'Ubuntu Condensed', sans-serif;
 	padding: 15px 55px;
 	background: white;
 	border-radius: 2px;
@@ -440,7 +446,7 @@ input[type="submit"] {
 
 	/*display: table-cell;*/
 	padding-bottom: 0px;
-	padding: 28px;
+	// padding: 28px;
 	text-align: center;
 	color: white;
 	
