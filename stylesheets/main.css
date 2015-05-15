@@ -5678,36 +5678,45 @@ ul.nav.navbar-nav {
   position: relative; }
 
 /*scroll*/
-.menu.on-scroll {
-  transition: height 0.3s ease-in-out;
-  background-color: rgba(245, 23, 120, 0.9);
-  height: 70px; }
+.navbar {
+  background-color: transparent;
+  transition: 0.8s ease-in-out; }
 
-.menu.on-scroll .menu {
-  border-color: 1px solid rgba(245, 23, 120, 0.9); }
-
-.menu.on-scroll .menu a {
-  font-size: 0.9em;
-  text-align: center; }
+.navbar.scroll {
+  background-color: rgba(179, 88, 139, 0.9);
+  width: 100%;
+  z-index: 10; }
 
 /*fin de scroll men├║*/
 .navbar-default .navbar-nav > li > a:hover {
   color: #337ab7; }
 
-ul li a:hover {
-  color: orange;
-  border-bottom: 3px solid rgba(245, 23, 120, 0.9); }
+.parentesis li > a::before {
+  display: inline-block;
+  content: "{";
+  color: transparent;
+  transform: translate(30px);
+  transition: 0.45s ease-in-out transform; }
+.parentesis li > a::after {
+  display: inline-block;
+  content: "}";
+  color: transparent;
+  transform: translate(-30px);
+  transition: 0.45s ease-in-out transform; }
 
-/*Fin del Menu Nav*/
+.parentesis > li > a:hover::before, .parentesis > li > a:hover::after {
+  display: inline-block;
+  color: red;
+  transform: translate(0px); }
+
 /*banner*/
 .home {
-  background: url(../img/banner9.jpg) scroll;
+  background-image: url(../img/banner9.jpg);
   /*display: table;*/
   /*width: 100%;*/
   min-height: 100%;
   background-size: cover;
   background-attachment: fixed;
-  /*position: relative;*/
   /*opacity: 0.6;	*/ }
 
 .titulo h1 {
@@ -5726,7 +5735,6 @@ ul li a:hover {
   padding-bottom: 100px;
   /*text-decoration: none;*/
   font-size: 28px;
-  padding-right: 118px;
   width: 100%; }
 
 .titulo h1:hover {
@@ -5734,12 +5742,9 @@ ul li a:hover {
   transition: 0.8s  ease-in-out; }
 
 .home .overlay {
-  transition: 0.8s ease-in-out;
-  background-color: rgba(15, 14, 11, 0.4);
-  min-height: 100%; }
+  transition: 0.8s ease-in-out; }
 
 .boton {
-  border: 5px solid rgba(245, 23, 120, 0.9);
   padding: 20px;
   font-size: 20px;
   color: #337ab7;
@@ -5750,6 +5755,7 @@ ul li a:hover {
   color: white; }
 
 .boton:hover {
+  border: 2px solid rgba(245, 23, 120, 0.9);
   color: rgba(245, 23, 120, 0.9);
   background-color: transparent;
   transition: height 0.3s, opacity 0.3s, transform 0.3s; }
@@ -5802,8 +5808,7 @@ a:hover {
   text-align: center;
   color: white;
   font-size: 18px;
-  margin-top: 35px;
-  padding-top: 35px;
+  padding-top: 24px;
   padding-left: 0px; }
 
 /*project*/
@@ -5899,11 +5904,6 @@ h3 {
 .parrafo h4 {
   margin-top: 0px; }
 
-.parrafo h4,
-p {
-  color: gray;
-  padding-left: 120px; }
-
 /*contactos*/
 .contactame h3 {
   text-align: left;
@@ -5998,7 +5998,6 @@ input[type="submit"] {
   height: 80px; }
 
 .footer p {
-  /*display: table-cell;*/
   padding-bottom: 0px;
   text-align: center;
   color: white; }

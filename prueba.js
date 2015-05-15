@@ -1,9 +1,19 @@
-  $(window).scroll(function(none) {
-  	// var scroll = $(this).scrollTop();
-  	// $('#zarai').text("El scrollTop actual es: " + scroll);
-    if ($(window).scrollTop() > ($(window).height() - 10)) {
-      $(".menu").addClass('on-scroll');
-    } else {
-      $(".menu").removeClass('on-scroll');
+  $(window).scroll(function() {
+  	var menu= $(this).scrollTop();
+  	if (menu > 200){
+  		$(".navbar").addClass("scroll");
+  	}
+    // if ($(window).scrollTop() > ($(window).height() - 10)) {
+    else if (menu < 450){
+      $(".navbar").removeClass("scroll");
     }
+
   });
+
+
+$(document).ready(function(){
+  $(".nav").hover(function(){
+    $(".hover-llaves").toggleClass("hidden");
+ 
+  });
+});
