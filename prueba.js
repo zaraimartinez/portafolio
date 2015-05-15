@@ -12,8 +12,12 @@
 
 
 $(document).ready(function(){
-  $(".nav").hover(function(){
+  $("nav").hover(function(){
     $(".hover-llaves").toggleClass("hidden");
- 
-  });
+ 	$(".titulo h1").toggleClass('dark-title');
+  }, function (){
+
+ 	$(".titulo h1").toggleClass('dark-title');
+ });
+
 });

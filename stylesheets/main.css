@@ -5689,7 +5689,7 @@ ul.nav.navbar-nav {
 
 /*fin de scroll men├║*/
 .navbar-default .navbar-nav > li > a:hover {
-  color: #337ab7; }
+  color: #fff; }
 
 .parentesis li > a::before {
   display: inline-block;
@@ -5721,6 +5721,11 @@ ul.nav.navbar-nav {
 
 .titulo h1 {
   font-size: 110px; }
+  .titulo h1:hover {
+    color: #337ab7;
+    transition: 0.8s  ease-in-out; }
+  .titulo h1.dark-title {
+    color: #337ab7; }
 
 .titulo {
   display: table-cell;
@@ -5737,12 +5742,10 @@ ul.nav.navbar-nav {
   font-size: 28px;
   width: 100%; }
 
-.titulo h1:hover {
-  color: #337ab7;
-  transition: 0.8s  ease-in-out; }
-
 .home .overlay {
-  transition: 0.8s ease-in-out; }
+  transition: 0.8s ease-in-out;
+  background-color: rgba(15, 14, 11, 0.4);
+  min-height: 100%; }
 
 .boton {
   padding: 20px;
@@ -5758,7 +5761,7 @@ ul.nav.navbar-nav {
   border: 2px solid rgba(245, 23, 120, 0.9);
   color: rgba(245, 23, 120, 0.9);
   background-color: transparent;
-  transition: height 0.3s, opacity 0.3s, transform 0.3s; }
+  transition: height 0.8s, opacity 0.3s, transform 0.3s; }
 
 a:hover {
   text-decoration: none; }
@@ -5771,7 +5774,6 @@ a:hover {
   padding: 42px; }
 
 .me {
-  /*padding-top: 20px;*/
   text-align: center; }
 
 .me h2 {
@@ -5851,14 +5853,14 @@ h3 {
 .overlay {
   position: absolute;
   width: 100%;
-  height: 251px;
+  height: 100%;
   top: 0;
   display: table;
   /*background-color: rgba(107, 231, 248, 0.3)*/
   /*padding: 0 1px;*/ }
 
 .overlay:hover {
-  background-color: rgba(223, 205, 24, 0.3); }
+  background-color: transparent; }
 
 .project1 img {
   width: 100%;
@@ -5911,14 +5913,15 @@ h3 {
   color: blue; }
 
 .contact {
-  border: 1px solid #0D8EDE;
-  margin: 33px; }
+  border: 2px solid #0D8EDE;
+  margin: 33px;
+  padding: 20px; }
 
 .icon {
   text-align: center; }
 
 .icon img {
-  width: 10%;
+  width: 6%;
   text-align: center; }
 
 .icon img:hover {
@@ -6001,5 +6004,10 @@ input[type="submit"] {
   padding-bottom: 0px;
   text-align: center;
   color: white; }
+
+@media screen and (max-width: 480px) {
+  .navegacion {
+    background-image: url(none);
+    background-color: aliceblue; } }
 
 /*# sourceMappingURL=main.css.map */
