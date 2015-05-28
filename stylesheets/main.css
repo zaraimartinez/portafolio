@@ -5646,14 +5646,13 @@ ul, a, p {
 .navbar {
   margin-bottom: 0px;
   border: none; }
-
-.navbar-default {
-  background-color: transparent;
-  border-color: transparent;
-  border-radius: 0px;
-  position: fixed;
-  z-index: 100;
-  width: 100%; }
+  .navbar.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 0px;
+    position: fixed;
+    z-index: 100;
+    width: 100%; }
 
 ul.nav.navbar-nav {
   float: none;
@@ -5674,10 +5673,8 @@ ul.nav.navbar-nav {
 .container-fluid .navbar-brand {
   color: white;
   margin-left: 56px;
-  /*border: 3px solid white;*/
   position: relative; }
 
-/*scroll*/
 .navbar {
   background-color: transparent;
   transition: 0.8s ease-in-out; }
@@ -5703,7 +5700,8 @@ ul.nav.navbar-nav {
   content: "}";
   color: transparent;
   transform: translate(-30px);
-  transition: 0.45s ease-in-out transform; }
+  transition: 0.45s ease-in-out transform;
+  font-weight: bold; }
 
 .parentesis > li > a:hover::before, .parentesis > li > a:hover::after {
   display: inline-block;
@@ -5735,25 +5733,14 @@ ul.nav.navbar-nav {
           color: #337ab7; }
       .home .overlay .titulo p {
         color: white;
-        padding-bottom: 100px;
         font-size: 28px;
         width: 100%; }
-    .home .overlay .boton {
-      padding: 20px;
-      font-size: 20px;
-      color: #337ab7;
-      background-color: rgba(242, 236, 236, 0.5);
-      font-weight: bold; }
-      .home .overlay .boton a {
-        color: white; }
-        .home .overlay .boton a:hover {
-          text-decoration: none; }
-      .home .overlay .boton:hover {
-        border: 2px solid rgba(245, 23, 120, 0.9);
-        color: rgba(245, 23, 120, 0.9);
-        background-color: transparent;
-        transition: height 0.8s, opacity 0.3s, transform 0.3s;
-        text-decoration: none; }
+      .home .overlay .titulo .arrow {
+        position: relative;
+        -webkit-transform: rotate(-90deg);
+        top: 180px; }
+        .home .overlay .titulo .arrow img {
+          width: 3.5%; }
   .home .overlay {
     transition: 0.8s ease-in-out;
     background-color: rgba(15, 14, 11, 0.4);
@@ -5858,14 +5845,13 @@ h3 {
   height: 250px; }
 
 /*contactos*/
-.contanctame .contactame h3 {
+.contact .contactame-name h3 {
   color: blue; }
-.contanctame .icon {
+.contact .icon {
   text-align: center; }
-  .contanctame .icon img {
-    width: 6%;
-    text-align: center; }
-    .contanctame .icon img:hover {
+  .contact .icon a {
+    width: 3%; }
+    .contact .icon a img:hover {
       background-color: rgba(231, 34, 136, 0.2);
       border-radius: 55%;
       width: 90px;

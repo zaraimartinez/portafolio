@@ -1,24 +1,19 @@
 /*Comienzo de Proyecto*/
 
 
- html,
- body{
- 	width: 100%;
- 	height: 100%;
- }
+html,
+body{
+	width: 100%;
+	height: 100%;
+}
 
 @font-face{
 	font-family:CaviarBold;
 	src:url(../Fuente/CaviarBold.ttf)
 }
- h1, h3{
- 	font-family: 'Great Vibes', cursive;
- }
-
-
-// h2, p, ul{
-// 	font-family: 'Josefin Slab', serif;
-// }
+h1, h3{
+	font-family: 'Great Vibes', cursive;
+}
 
 h2{
 	font-family:'CaviarBold';
@@ -36,20 +31,19 @@ ul, a, p{
 .navbar {
 	margin-bottom: 0px;
 	border:none;
+		&.navbar-default{
+			background-color: transparent;
+			border-color:transparent;
+			border-radius: 0px;
+			position: fixed;
+			z-index: 100;
+			width: 100%;
+		}
 }
-	.navbar-default{
-		background-color: transparent;
-		border-color:transparent;
-		border-radius: 0px;
-		position: fixed;
-		z-index: 100;
-		width: 100%;
-	}
 	ul.nav.navbar-nav {
 		float: none;
 		margin: 0;
 		text-align: right;
-	  // font-family: 'Ubuntu Condensed', sans-serif;
 	}
 .navbar-nav > li {
 	float: none;
@@ -67,25 +61,8 @@ ul, a, p{
 .container-fluid .navbar-brand, {
 	color: white;
 	margin-left:56px;
-	/*border: 3px solid white;*/
 	position: relative;
-	// font-family: 'Cinzel Decorative', cursive;
 }
-
-/*scroll*/
-// .menu.on-scroll {
-// 	transition: height 0.8s ease-in-out;
-// 	background-color: rgba(245, 23, 120, 0.9);
-// 	height: 54px;
-// }
-
-// .menu.on-scroll .menu {
-// 	border-color:1px solid rgba(245, 23, 120, 0.9);
-// }
-// .menu.on-scroll .menu a {
-// 	font-size: 0.9em;
-// 	text-align: center;
-// }
 
 .navbar {
 	background-color: transparent;
@@ -94,7 +71,6 @@ ul, a, p{
 
 .navbar.scroll {
 	background-color:rgba(179, 88, 139, 0.9);
-	// position:fixed;
 	width:100%;
 	z-index: 10;
 }
@@ -107,11 +83,10 @@ ul, a, p{
 	li > a::before{
 		display: inline-block;
 		content:"{";
-	    color:transparent;
-	    // opacity: 1;
-	    transform:translate(30px);
-	    transition: 0.45s ease-in-out transform;
-	    font-weight: bold;	
+    color:transparent;
+    transform:translate(30px);
+    transition: 0.45s ease-in-out transform;
+    font-weight: bold;	
 	}
 	li > a::after{
 		display: inline-block;
@@ -119,6 +94,7 @@ ul, a, p{
 		color:transparent;
 		transform:translate(-30px);
 		transition: 0.45s ease-in-out transform;
+		font-weight: bold;
 		// opacity:1;
 	}
 
@@ -160,32 +136,21 @@ ul, a, p{
 
 			p {
 				color: white;
-				padding-bottom: 100px;
+				//padding-bottom: 100px;
 				font-size: 28px;
 				width: 100%;
 				}
+			.arrow{
+				position: relative;
+				-webkit-transform: rotate(-90deg);
+				top: 180px;
+				img{
+					width: 3.5%;
+				}
+			}
 
 			}
-			.boton {
-				padding:20px;
-				font-size: 20px;
-				color: #337ab7;
-				background-color: rgba(242, 236, 236, 0.5);
-				font-weight:bold;
-				a {
-					color: white;
-					&:hover{ 
-						text-decoration: none;
-					}
-				}
-				&:hover{
-					border: 2px solid  rgba(245, 23, 120, 0.9);
-					color: rgba(245, 23, 120, 0.9);
-					background-color: transparent;
-					transition: height 0.8s, opacity 0.3s, transform 0.3s;
-					text-decoration: none;
-				}
-			}
+
 		}
 	.overlay {
 		transition: 0.8s ease-in-out;
@@ -334,31 +299,33 @@ h3 {
 }
 
 /*contactos*/
-.contanctame{
-	.contactame{
+.contact{
+	.contactame-name{
 		h3{
 			color:blue;
 		}
 	}
-
-	.icon {
+	.icon{
 		text-align: center;
-		img{
-			width: 6%;
-			text-align: center;
-			&:hover{
-				background-color: rgba(231, 34, 136,0.2);
-				border-radius: 55%;
-				width: 90px;
-				height:80px;
-			}
+		a{
+			width: 3%;
+			img{
 
+				&:hover{
+					background-color: rgba(231, 34, 136,0.2);
+					border-radius: 55%;
+					width: 90px;
+					height:80px;
+				}
+				
+			}
 		}
 	}
 	
 }
 
 
+	
 
 //Sección footer
 .footer {

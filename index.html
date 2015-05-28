@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title>Portafólio</title>
 		<link rel="stylesheet" href="stylesheets/main.css">
+		<link href='http://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Pinyon+Script' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
@@ -45,11 +46,14 @@
 		  	<div class="titulo text-center">
 		  		<h1 class="dark-title">Zaraí Martínez</h1>
 		  		<p>Programadora Web</p>
-		  		<a class="boton" href="#">CONTÁCTAME</a>
+				<div class="arrow">
+			  		<a href="#yo"><img src="img/left.png" alt=""></a>	
+				</div>
+		  		
 		  	</div>
 	  	</div>
 	</section>
-	<section class="about-me">
+	<section id="yo" class="about-me">
 		<div class="container">
 			<div class="sobremi">
 				<div class="me">
@@ -119,12 +123,12 @@
 			</div>
 		</div>
 		</section>
-		<section class="contactame">
-			<div class="contact">
+		<section class="contact">
+			<div class="contactame">
 				<h2>Contáctame</h2>
 				<div class="line3"></div>
 				<div class="text-center">
-					<div class="contactame">
+					<div class="contactame-name">
 						<h3>Zaraí Martínez</h3>
 						<p>Portafolio Zaraí</p>
 						<p>e-mail:zarai.martinezt@gmail.com</p>
@@ -145,5 +149,21 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script>
+			$(function() {
+			  $('a[href*=#]:not([href=#])').click(function() {
+			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			      var target = $(this.hash);
+			      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			      if (target.length) {
+			        $('html,body').animate({
+			          scrollTop: target.offset().top
+			        }, 1000);
+			        return false;
+			      }
+			    }
+			  });
+			});
+		</script>
 	</body>
 </html>
