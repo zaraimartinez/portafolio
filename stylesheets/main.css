@@ -5680,7 +5680,7 @@ ul.nav.navbar-nav {
   transition: 0.8s ease-in-out; }
 
 .navbar.scroll {
-  background-color: rgba(179, 88, 139, 0.9);
+  background-color: #f7bd51;
   width: 100%;
   z-index: 10; }
 
@@ -5722,17 +5722,16 @@ ul.nav.navbar-nav {
     display: table; }
     .home .overlay .titulo {
       display: table-cell;
-      vertical-align: middle;
-      color: white; }
+      vertical-align: middle; }
       .home .overlay .titulo h1 {
         font-size: 110px; }
         .home .overlay .titulo h1:hover {
-          color: #337ab7;
+          color: #f7bd51;
           transition: 0.8s  ease-in-out; }
         .home .overlay .titulo h1.dark-title {
-          color: #337ab7; }
+          color: #d9452b; }
       .home .overlay .titulo p {
-        color: white;
+        color: #858196;
         font-size: 28px;
         width: 100%; }
       .home .overlay .titulo .arrow {
@@ -5740,37 +5739,35 @@ ul.nav.navbar-nav {
         -webkit-transform: rotate(-90deg);
         top: 180px; }
         .home .overlay .titulo .arrow img {
-          width: 3.5%; }
+          width: 4.5%; }
   .home .overlay {
     transition: 0.8s ease-in-out;
-    background-color: rgba(15, 14, 11, 0.4);
     min-height: 100%; }
 
 /*Secci├│n Sobre Mi*/
 .about-me {
-  background-color: rgba(197, 234, 245, 0.99);
+  background-color: white;
   width: 100%;
-  background-image: url(../img/paris.png);
-  background-size: cover;
   background-attachment: fixed; }
   .about-me .sobremi {
     padding: 20px; }
     .about-me .sobremi .me {
       text-align: center; }
       .about-me .sobremi .me h2 {
-        color: #62575A; }
+        color: #576d9c; }
     .about-me .sobremi .line {
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid #576d9c;
       width: 10%;
       margin: 0 auto; }
     .about-me .sobremi .contenido {
       padding: 40px; }
       .about-me .sobremi .contenido .yo {
         text-align: center;
-        width: 77%; }
+        width: 77%;
+        margin: 0 auto; }
         .about-me .sobremi .contenido .yo img {
           padding: 20px;
-          border: 1px solid white;
+          border: 1px solid #858196;
           width: 100%;
           margin: 20px; }
       .about-me .sobremi .contenido .aboutme {
@@ -5778,46 +5775,43 @@ ul.nav.navbar-nav {
         vertical-align: middle; }
         .about-me .sobremi .contenido .aboutme p {
           text-align: center;
-          color: #62575A;
+          color: #576d9c;
           font-size: 18px;
-          padding-left: 0px; }
+          padding-left: 0px;
+          margin-top: 26px; }
 
 /*Secci├│n de Proyectos*/
-.project h2, .blog h2, .contact h2 {
+.project h2, .blog h2, .contact h2, .skill h2 {
   text-align: center;
-  color: #0D8EDE;
   font-weight: bold; }
 
-.project .project-contenido {
-  padding: 20px; }
-  .project .project-contenido .line2 {
-    border-bottom: 1px solid #0D8EDE;
-    color: #0D8EDE;
-    width: 10%;
-    margin: 0 auto; }
-  .project .project-contenido p {
-    color: #0D8EDE;
-    font-size: 18px;
-    text-align: center;
-    padding: 20px 218px; }
-  .project .project-contenido .coment img {
-    width: 100%; }
-  .project .project-contenido .coment .profile {
-    position: absolute;
-    margin-top: -53px;
-    margin-left: 10px;
-    z-index: 10; }
-    .project .project-contenido .coment .profile img {
-      border-radius: 50%;
-      width: 100px; }
-  .project .project-contenido .coment .parrafo {
-    position: relative;
-    background-color: #aedaf5;
-    padding: 10px 10px 10px 100px; }
-    .project .project-contenido .coment .parrafo h4 {
-      margin-top: 0px; }
-    .project .project-contenido .coment .parrafo p {
-      padding: 0px; }
+.project {
+  background-color: #404259; }
+  .project .project-contenido {
+    padding: 20px 20px 40px; }
+    .project .project-contenido .line2 {
+      border-bottom: 1px solid #576d9c;
+      color: #0D8EDE;
+      width: 10%;
+      margin: 0 auto; }
+    .project .project-contenido h2 {
+      color: white; }
+    .project .project-contenido p {
+      color: white;
+      font-size: 18px;
+      text-align: center;
+      padding: 20px 218px; }
+    .project .project-contenido .coment {
+      border: 1px solid white; }
+      .project .project-contenido .coment p {
+        color: #858196; }
+      .project .project-contenido .coment img {
+        width: 100%;
+        padding: 20px; }
+      .project .project-contenido .coment.olas-peru img {
+        width: 100%;
+        height: 230px;
+        padding: 20px; }
 
 .project1 {
   position: relative;
@@ -5837,37 +5831,74 @@ h3 {
 .overlay:hover h3 {
   visibility: visible; }
 
-.overlay:hover {
-  background-color: rgba(107, 114, 134, 0.27); }
-
 .project1 img {
   width: 100%;
   height: 250px; }
 
 /*contactos*/
-.contact .contactame-name h3 {
-  color: blue; }
-.contact .icon {
-  text-align: center; }
-  .contact .icon a {
-    width: 3%; }
-    .contact .icon a img:hover {
-      background-color: rgba(231, 34, 136, 0.2);
-      border-radius: 55%;
-      width: 90px;
-      height: 80px; }
+.contact {
+  background-color: #404259; }
+  .contact .contactame-name h3 {
+    color: blue; }
+  .contact .icon {
+    text-align: center; }
+    .contact .icon a {
+      width: 3%; }
+      .contact .icon a img:hover {
+        background-color: rgba(231, 34, 136, 0.2);
+        border-radius: 55%;
+        width: 90px;
+        height: 80px; }
+
+.skill .habilidades {
+  padding: 20px; }
+  .skill .habilidades h2 {
+    color: #576d9c; }
+  .skill .habilidades .line3 {
+    border-bottom: 1px solid #576d9c;
+    color: #0D8EDE;
+    width: 10%;
+    margin: 0 auto;
+    margin-bottom: 20px; }
+  .skill .habilidades .programas {
+    margin: 0 auto;
+    display: table; }
+    .skill .habilidades .programas a {
+      float: left; }
+      .skill .habilidades .programas a:hover {
+        background-color: #858196;
+        transition: 2s ease-in-out; }
+        .skill .habilidades .programas a:hover a p {
+          color: white;
+          text-decoration: none; }
+          .skill .habilidades .programas a:hover a p:hover {
+            color: white; }
+      .skill .habilidades .programas a p {
+        text-align: center; }
+        .skill .habilidades .programas a p:hover {
+          color: white; }
+      .skill .habilidades .programas a img {
+        margin: 40px;
+        border: 2px solid white;
+        padding: 20px;
+        background-color: #f7bd51; }
 
 .footer {
-  background-color: #0D8EDE;
-  height: 80px; }
+  background-color: #f7bd51;
+  height: 60px; }
   .footer p {
-    padding-bottom: 0px;
+    padding-top: 22px;
     text-align: center;
     color: white; }
 
 @media screen and (max-width: 480px) {
   .navegacion {
     background-image: url(none);
-    background-color: aliceblue; } }
+    background-color: aliceblue; }
+
+  .about-me .sobremi .contenido {
+    padding: 0px; }
+  .about-me .sobremi .line {
+    width: 40%; } }
 
 /*# sourceMappingURL=main.css.map */
