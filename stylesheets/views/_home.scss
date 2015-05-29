@@ -1,4 +1,58 @@
 /*Comienzo de Proyecto*/
+// Colores
+$color-sand		:	#d9452b;
+$color-brown    :	#f7bd51;				
+$color-purple	:	#404259;
+$color-blueblck	:	#242e3d;
+$color-sky		:	#576d9c;
+$color-lila		:	#858196;
+
+@mixin color-opacity($color, $opacity: 0.3) {
+    background: $color; 
+    background: rgba($color, $opacity);
+}
+
+// Fonts
+@font-face{
+	font-family:CaviarBold;
+	src:url(../fuente/CaviarBold.ttf)
+}
+@font-face{
+	font-family:CaviarDreams;
+	src:url(../fuente/CaviarDreams.ttf);
+}
+@mixin font-family-caviar-bold{
+	font-family:'CaviarBold';
+}
+
+@mixin font-family-caviar-dreams{
+	font-family:'CaviarDreams';
+}
+
+@mixin font-family-great-vibes{
+ 	font-family: 'Great Vibes', cursive;
+}
+
+// Fonts
+@font-face{
+	font-family:CaviarBold;
+	src:url(../fuente/CaviarBold.ttf)
+}
+@font-face{
+	font-family:CaviarDreams;
+	src:url(../fuente/CaviarDreams.ttf);
+}
+@mixin font-family-caviar-bold{
+	font-family:'CaviarBold';
+}
+
+@mixin font-family-caviar-dreams{
+	font-family:'CaviarDreams';
+}
+
+@mixin font-family-great-vibes{
+ 	font-family: 'Great Vibes', cursive;
+}
 
 
 html,
@@ -7,135 +61,135 @@ body{
 	height: 100%;
 }
 
-@font-face{
-	font-family:CaviarBold;
-	src:url(../fuente/CaviarBold.ttf)
-}
-h1, h3{
-	font-family: 'Great Vibes', cursive;
+h1{
+	font-size: 3.6em;
 }
 
 h2{
-	font-family:'CaviarBold';
+	font-size: 2.3em;
 }
 
-@font-face{
-	font-family:CaviarDreams;
-	src:url(../fuente/CaviarDreams.ttf);
+h3{
+	font-size: 1.8em;
 }
+
+h1, h3{
+	@include font-family-great-vibes;
+}
+
+h2{
+	@include font-family-caviar-bold;
+}
+
 ul, a, p{
-	font-family:'CaviarDreams';
+	@include font-family-caviar-dreams;
 }
 
 //Sección Navegación
 .navbar {
-	margin-bottom: 0px;
+	background-color: transparent;
 	border:none;
-		&.navbar-default{
-			background-color: transparent;
-			border-color:transparent;
-			border-radius: 0px;
-			position: fixed;
-			z-index: 100;
-			width: 100%;
+	margin-bottom: 0px;
+	transition: 0.8s ease-in-out;
+
+	&.navbar-default{
+		background-color: transparent;
+		border-color:transparent;
+		border-radius: 0px;
+		position: fixed;
+		z-index: 100;
+		width: 100%;
+
+		.navbar-nav > li > a{
+			color: white;
+			font-size:20px;
 		}
-}
+		.navbar-nav > li > a:hover{
+			color: #fff;
+		}
+		.navbar-nav > li > a{
+			margin: 0px 40px;
+		}
+	}
+	&.scroll {
+		background-color:$color-brown;
+		width:100%;
+		z-index: 10;
+	}	
 	ul.nav.navbar-nav {
 		float: none;
 		margin: 0;
 		text-align: right;
 	}
-.navbar-nav > li {
-	float: none;
-	display: inline-block;
-}
+	.navbar-nav > li {
+		float: none;
+		display: inline-block;
+	}
 
-.navbar-default .navbar-nav > li > a{
-	color: white;
-	font-size:20px;
-}
-.navbar-nav > li > a{
-	margin: 0px 40px;
-}
+	.container-fluid .navbar-brand, {
+		color: white;
+		margin-left:56px;
+		position: relative;
+	}
 
-.container-fluid .navbar-brand, {
-	color: white;
-	margin-left:56px;
-	position: relative;
-}
-
-.navbar {
-	background-color: transparent;
-	transition: 0.8s ease-in-out;
-}
-
-.navbar.scroll {
-	background-color:#f7bd51;
-	width:100%;
-	z-index: 10;
-}
-/*fin de scroll menú*/
-.navbar-default .navbar-nav > li > a:hover{
-	color: #fff;
 }
 
 .parentesis{
 	li > a::before{
-		display: inline-block;
+	    color:transparent;
 		content:"{";
-    color:transparent;
-    transform:translate(30px);
-    transition: 0.45s ease-in-out transform;
-    font-weight: bold;	
+		display: inline-block;
+	    font-weight: bold;	
+	    transform:translate(30px);
+	    transition: 0.45s ease-in-out transform;
 	}
 	li > a::after{
-		display: inline-block;
-		content:"}";
 		color:transparent;
+		content:"}";
+		display: inline-block;
+		font-weight: bold;
 		transform:translate(-30px);
 		transition: 0.45s ease-in-out transform;
-		font-weight: bold;
 		// opacity:1;
 	}
 
 }
 
 .parentesis > li > a:hover::before, .parentesis  > li > a:hover::after{
-	display: inline-block;
 	color:red;
+	display: inline-block;
 	transform:translate(0px);
 }
 
 /*banner*/
 .home{
-	background-image: url(../img/zarai2.jpg);
-	min-height: 100%;
-	background-size: cover;
  	background-attachment: fixed;
+	background-image: url(../img/zarai2.jpg);
+	background-size: cover;
+	min-height: 100%;
 	.overlay {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
 		display: table;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		width: 100%;
 		.titulo {
 			display: table-cell;
 			vertical-align: middle;
 		
 			h1 {
 				font-size: 110px;
-				// font-family: 'Great Vibes', cursive;
 				&:hover{
 					color:#f7bd51;
 					transition: 0.8s  ease-in-out;
 				}
 				&.dark-title{
-					color:#d9452b;
+					color:$color-sand;
 				}
 			}
 
 			p {
-				color:#858196;
+				color:$color-purple;
 				//padding-bottom: 100px;
 				font-size: 28px;
 				width: 100%;
@@ -159,19 +213,11 @@ ul, a, p{
 	}
 }
 
-
-
-
-
-
 /*Sección Sobre Mi*/
 .about-me{
-	background-color:white;
-	width:100%;
-	//background-image:url(../img/glujpg)
-	//background-image:url(../img/paris.png);
-	//background-size:cover;				
 	background-attachment:fixed;
+	background-color:white;
+	width:100%;				
 	.sobremi {
 		padding: 20px;
 		.me {
@@ -181,7 +227,7 @@ ul, a, p{
 			}
 		}
 		.line {
-			border-bottom: 1px solid #576d9c;
+			border-bottom: 1px solid $color-sky;
 			width: 10%;
 			margin: 0 auto;
 
@@ -190,24 +236,25 @@ ul, a, p{
 			padding: 40px;
 			.yo {
 				text-align: center;
-				width: 77%;
 				margin: 0 auto;
+				width: 77%;
 				img {
-					padding: 20px;
 					border: 1px solid #858196;
-					width: 100%;
 					margin: 20px;
+					padding: 20px;
+					width: 100%;
 				}
 			}
 			.aboutme{
 				display: table-cell;
 				vertical-align: middle;
 				p {
-					text-align: center;
 					color:#576d9c;
 					font-size: 18px;
+					text-align: center;
+				  	margin-top: 26px;
 					padding-left: 0px;
-				  margin-top: 26px;
+				  		
 				}
 			}
 		}
@@ -217,15 +264,15 @@ ul, a, p{
 /*Sección de Proyectos*/
 
 .project h2, .blog h2, .contact h2, .skill h2{
-	text-align: center;	
 	font-weight:bold;
+	text-align: center;	
 }
 .project{
-	background-color:#404259;
+	background-color:$color-purple;
 	.project-contenido {
 		padding: 20px 20px 50px;
 		.line2{
-			border-bottom: 1px solid #576d9c;
+			border-bottom: 1px solid $color-sky;
 			color:#0D8EDE;
 			width: 10%;
 			margin: 0 auto;
@@ -297,7 +344,7 @@ h3 {
 				color:#576d9c;
 			}
 			.line3{
-				border-bottom: 1px solid #576d9c;
+				border-bottom: 1px solid $color-sky;
 				color:#0D8EDE;
 				width: 10%;
 				margin: 0 auto;
@@ -332,7 +379,7 @@ h3 {
 							margin:40px;
 							border: 2px solid white;
 							padding: 20px;
-							background-color: #f7bd51;
+							background-color: $color-brown;
 						}
 					}
 			}
@@ -340,7 +387,7 @@ h3 {
 	}
 /*contactos*/
 .contact{
-	background-color:#404259;
+	background-color:$color-purple;
 	.contactame{
 		padding: 20px 20px 50px;
 		h2{
@@ -350,15 +397,14 @@ h3 {
 			color:white;
 		}
 		.line4{
-			border-bottom: 1px solid #576d9c;
-			color:#0D8EDE;
+			border-bottom: 1px solid $color-sky;
 			width: 10%;
 			margin: 0 auto;
 		}
 	}
 	.contactame-name{
 		h3{
-			color:#f7bd51;
+			color:$color-brown;
 		}
 	}
 	.icon{
@@ -366,8 +412,10 @@ h3 {
 		a{
 			
 			img{
-				width: 4%;
+		  		filter: invert(100%);
+				-webkit-filter: invert(100%);
 				padding:7px;
+				width: 4%;
 				&:hover{
 					background-color: white;
 					border:1px solid white;
@@ -383,7 +431,7 @@ h3 {
 
 //Sección footer
 .footer {
-	background-color: #f7bd51;
+	background-color: $color-brown;
 	height: 60px;
 	p {
 		padding-top: 22px;

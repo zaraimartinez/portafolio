@@ -5623,29 +5623,46 @@ button.close {
   .hidden-print {
     display: none !important; } }
 /*Comienzo de Proyecto*/
+@font-face {
+  font-family: CaviarBold;
+  src: url(../fuente/CaviarBold.ttf); }
+@font-face {
+  font-family: CaviarDreams;
+  src: url(../fuente/CaviarDreams.ttf); }
+@font-face {
+  font-family: CaviarBold;
+  src: url(../fuente/CaviarBold.ttf); }
+@font-face {
+  font-family: CaviarDreams;
+  src: url(../fuente/CaviarDreams.ttf); }
 html,
 body {
   width: 100%;
   height: 100%; }
 
-@font-face {
-  font-family: CaviarBold;
-  src: url(../fuente/CaviarBold.ttf); }
+h1 {
+  font-size: 3.6em; }
+
+h2 {
+  font-size: 2.3em; }
+
+h3 {
+  font-size: 1.8em; }
+
 h1, h3 {
   font-family: 'Great Vibes', cursive; }
 
 h2 {
   font-family: 'CaviarBold'; }
 
-@font-face {
-  font-family: CaviarDreams;
-  src: url(../fuente/CaviarDreams.ttf); }
 ul, a, p {
   font-family: 'CaviarDreams'; }
 
 .navbar {
+  background-color: transparent;
+  border: none;
   margin-bottom: 0px;
-  border: none; }
+  transition: 0.8s ease-in-out; }
   .navbar.navbar-default {
     background-color: transparent;
     border-color: transparent;
@@ -5653,73 +5670,61 @@ ul, a, p {
     position: fixed;
     z-index: 100;
     width: 100%; }
-
-ul.nav.navbar-nav {
-  float: none;
-  margin: 0;
-  text-align: right; }
-
-.navbar-nav > li {
-  float: none;
-  display: inline-block; }
-
-.navbar-default .navbar-nav > li > a {
-  color: white;
-  font-size: 20px; }
-
-.navbar-nav > li > a {
-  margin: 0px 40px; }
-
-.container-fluid .navbar-brand {
-  color: white;
-  margin-left: 56px;
-  position: relative; }
-
-.navbar {
-  background-color: transparent;
-  transition: 0.8s ease-in-out; }
-
-.navbar.scroll {
-  background-color: #f7bd51;
-  width: 100%;
-  z-index: 10; }
-
-/*fin de scroll men├║*/
-.navbar-default .navbar-nav > li > a:hover {
-  color: #fff; }
+    .navbar.navbar-default .navbar-nav > li > a {
+      color: white;
+      font-size: 20px; }
+    .navbar.navbar-default .navbar-nav > li > a:hover {
+      color: #fff; }
+    .navbar.navbar-default .navbar-nav > li > a {
+      margin: 0px 40px; }
+  .navbar.scroll {
+    background-color: #f7bd51;
+    width: 100%;
+    z-index: 10; }
+  .navbar ul.nav.navbar-nav {
+    float: none;
+    margin: 0;
+    text-align: right; }
+  .navbar .navbar-nav > li {
+    float: none;
+    display: inline-block; }
+  .navbar .container-fluid .navbar-brand {
+    color: white;
+    margin-left: 56px;
+    position: relative; }
 
 .parentesis li > a::before {
-  display: inline-block;
+  color: transparent;
   content: "{";
-  color: transparent;
-  transform: translate(30px);
-  transition: 0.45s ease-in-out transform;
-  font-weight: bold; }
-.parentesis li > a::after {
   display: inline-block;
-  content: "}";
+  font-weight: bold;
+  transform: translate(30px);
+  transition: 0.45s ease-in-out transform; }
+.parentesis li > a::after {
   color: transparent;
+  content: "}";
+  display: inline-block;
+  font-weight: bold;
   transform: translate(-30px);
-  transition: 0.45s ease-in-out transform;
-  font-weight: bold; }
+  transition: 0.45s ease-in-out transform; }
 
 .parentesis > li > a:hover::before, .parentesis > li > a:hover::after {
-  display: inline-block;
   color: red;
+  display: inline-block;
   transform: translate(0px); }
 
 /*banner*/
 .home {
+  background-attachment: fixed;
   background-image: url(../img/zarai2.jpg);
-  min-height: 100%;
   background-size: cover;
-  background-attachment: fixed; }
+  min-height: 100%; }
   .home .overlay {
-    position: absolute;
-    width: 100%;
+    display: table;
     height: 100%;
+    position: absolute;
     top: 0;
-    display: table; }
+    width: 100%; }
     .home .overlay .titulo {
       display: table-cell;
       vertical-align: middle; }
@@ -5731,7 +5736,7 @@ ul.nav.navbar-nav {
         .home .overlay .titulo h1.dark-title {
           color: #d9452b; }
       .home .overlay .titulo p {
-        color: #858196;
+        color: #404259;
         font-size: 28px;
         width: 100%; }
       .home .overlay .titulo .arrow {
@@ -5746,9 +5751,9 @@ ul.nav.navbar-nav {
 
 /*Secci├│n Sobre Mi*/
 .about-me {
+  background-attachment: fixed;
   background-color: white;
-  width: 100%;
-  background-attachment: fixed; }
+  width: 100%; }
   .about-me .sobremi {
     padding: 20px; }
     .about-me .sobremi .me {
@@ -5763,27 +5768,27 @@ ul.nav.navbar-nav {
       padding: 40px; }
       .about-me .sobremi .contenido .yo {
         text-align: center;
-        width: 77%;
-        margin: 0 auto; }
+        margin: 0 auto;
+        width: 77%; }
         .about-me .sobremi .contenido .yo img {
-          padding: 20px;
           border: 1px solid #858196;
-          width: 100%;
-          margin: 20px; }
+          margin: 20px;
+          padding: 20px;
+          width: 100%; }
       .about-me .sobremi .contenido .aboutme {
         display: table-cell;
         vertical-align: middle; }
         .about-me .sobremi .contenido .aboutme p {
-          text-align: center;
           color: #576d9c;
           font-size: 18px;
-          padding-left: 0px;
-          margin-top: 26px; }
+          text-align: center;
+          margin-top: 26px;
+          padding-left: 0px; }
 
 /*Secci├│n de Proyectos*/
 .project h2, .blog h2, .contact h2, .skill h2 {
-  text-align: center;
-  font-weight: bold; }
+  font-weight: bold;
+  text-align: center; }
 
 .project {
   background-color: #404259; }
@@ -5882,7 +5887,6 @@ h3 {
       color: white; }
     .contact .contactame .line4 {
       border-bottom: 1px solid #576d9c;
-      color: #0D8EDE;
       width: 10%;
       margin: 0 auto; }
   .contact .contactame-name h3 {
@@ -5890,8 +5894,10 @@ h3 {
   .contact .icon {
     text-align: center; }
     .contact .icon a img {
-      width: 4%;
-      padding: 7px; }
+      filter: invert(100%);
+      -webkit-filter: invert(100%);
+      padding: 7px;
+      width: 4%; }
       .contact .icon a img:hover {
         background-color: white;
         border: 1px solid white; }
