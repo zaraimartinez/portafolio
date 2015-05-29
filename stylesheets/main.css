@@ -5739,7 +5739,7 @@ ul.nav.navbar-nav {
         -webkit-transform: rotate(-90deg);
         top: 180px; }
         .home .overlay .titulo .arrow img {
-          width: 4.5%; }
+          width: 3.5%; }
   .home .overlay {
     transition: 0.8s ease-in-out;
     min-height: 100%; }
@@ -5788,7 +5788,7 @@ ul.nav.navbar-nav {
 .project {
   background-color: #404259; }
   .project .project-contenido {
-    padding: 20px 20px 40px; }
+    padding: 20px 20px 50px; }
     .project .project-contenido .line2 {
       border-bottom: 1px solid #576d9c;
       color: #0D8EDE;
@@ -5835,23 +5835,8 @@ h3 {
   width: 100%;
   height: 250px; }
 
-/*contactos*/
-.contact {
-  background-color: #404259; }
-  .contact .contactame-name h3 {
-    color: blue; }
-  .contact .icon {
-    text-align: center; }
-    .contact .icon a {
-      width: 3%; }
-      .contact .icon a img:hover {
-        background-color: rgba(231, 34, 136, 0.2);
-        border-radius: 55%;
-        width: 90px;
-        height: 80px; }
-
 .skill .habilidades {
-  padding: 20px; }
+  padding: 20px 20px 50px; }
   .skill .habilidades h2 {
     color: #576d9c; }
   .skill .habilidades .line3 {
@@ -5874,7 +5859,10 @@ h3 {
           .skill .habilidades .programas a:hover a p:hover {
             color: white; }
       .skill .habilidades .programas a p {
-        text-align: center; }
+        color: #576d9c;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none; }
         .skill .habilidades .programas a p:hover {
           color: white; }
       .skill .habilidades .programas a img {
@@ -5882,6 +5870,31 @@ h3 {
         border: 2px solid white;
         padding: 20px;
         background-color: #f7bd51; }
+
+/*contactos*/
+.contact {
+  background-color: #404259; }
+  .contact .contactame {
+    padding: 20px 20px 50px; }
+    .contact .contactame h2 {
+      color: white; }
+    .contact .contactame p {
+      color: white; }
+    .contact .contactame .line4 {
+      border-bottom: 1px solid #576d9c;
+      color: #0D8EDE;
+      width: 10%;
+      margin: 0 auto; }
+  .contact .contactame-name h3 {
+    color: #f7bd51; }
+  .contact .icon {
+    text-align: center; }
+    .contact .icon a img {
+      width: 4%;
+      padding: 7px; }
+      .contact .icon a img:hover {
+        background-color: white;
+        border: 1px solid white; }
 
 .footer {
   background-color: #f7bd51;
