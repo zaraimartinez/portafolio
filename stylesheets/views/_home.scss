@@ -180,7 +180,7 @@ ul, a, p{
 			h1 {
 				font-size: 110px;
 				&:hover{
-					color:#f7bd51;
+					color:red;
 					transition: 0.8s  ease-in-out;
 				}
 				&.dark-title{
@@ -190,7 +190,6 @@ ul, a, p{
 
 			p {
 				color:$color-purple;
-				//padding-bottom: 100px;
 				font-size: 28px;
 				width: 100%;
 				}
@@ -203,9 +202,8 @@ ul, a, p{
 				}
 			}
 
-			}
-
 		}
+	}
 	.overlay {
 		transition: 0.8s ease-in-out;
 		
@@ -351,18 +349,24 @@ h3 {
 				margin-bottom: 20px;
 			}
 			.programas{
-				margin:0 auto;
 				display: table;
+				margin:0 auto;
 					a {
+						color:white;
 						float:left;
+						text-decoration: none;
 						&:hover{
-							background-color: #858196;
-							transition: 2s ease-in-out;
+							color:white;
+							background-color: $color-lila;
+							text-decoration: none;
+							transition: 0.8s ease-in-out;
+
 							a p{
 								color:white;
 								text-decoration: none;
 								&:hover{
 									color: white;
+									text-decoration: none;
 								}
 							}
 						}
@@ -380,6 +384,9 @@ h3 {
 							border: 2px solid white;
 							padding: 20px;
 							background-color: $color-brown;
+							&:hover{
+								color:white;
+							}
 						}
 					}
 			}

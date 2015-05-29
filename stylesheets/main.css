@@ -5731,7 +5731,7 @@ ul, a, p {
       .home .overlay .titulo h1 {
         font-size: 110px; }
         .home .overlay .titulo h1:hover {
-          color: #f7bd51;
+          color: red;
           transition: 0.8s  ease-in-out; }
         .home .overlay .titulo h1.dark-title {
           color: #d9452b; }
@@ -5851,18 +5851,23 @@ h3 {
     margin: 0 auto;
     margin-bottom: 20px; }
   .skill .habilidades .programas {
-    margin: 0 auto;
-    display: table; }
+    display: table;
+    margin: 0 auto; }
     .skill .habilidades .programas a {
-      float: left; }
+      color: white;
+      float: left;
+      text-decoration: none; }
       .skill .habilidades .programas a:hover {
+        color: white;
         background-color: #858196;
-        transition: 2s ease-in-out; }
+        text-decoration: none;
+        transition: 0.8s ease-in-out; }
         .skill .habilidades .programas a:hover a p {
           color: white;
           text-decoration: none; }
           .skill .habilidades .programas a:hover a p:hover {
-            color: white; }
+            color: white;
+            text-decoration: none; }
       .skill .habilidades .programas a p {
         color: #576d9c;
         font-weight: bold;
@@ -5875,6 +5880,8 @@ h3 {
         border: 2px solid white;
         padding: 20px;
         background-color: #f7bd51; }
+        .skill .habilidades .programas a img:hover {
+          color: white; }
 
 /*contactos*/
 .contact {
