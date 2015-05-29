@@ -5630,7 +5630,7 @@ body {
 
 @font-face {
   font-family: CaviarBold;
-  src: url(../Fuente/CaviarBold.ttf); }
+  src: url(../fuente/CaviarBold.ttf); }
 h1, h3 {
   font-family: 'Great Vibes', cursive; }
 
@@ -5639,7 +5639,7 @@ h2 {
 
 @font-face {
   font-family: CaviarDreams;
-  src: url(../Fuente/CaviarDreams.ttf); }
+  src: url(../fuente/CaviarDreams.ttf); }
 ul, a, p {
   font-family: 'CaviarDreams'; }
 
