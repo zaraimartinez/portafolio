@@ -33,27 +33,6 @@ $color-lila		:	#858196;
  	font-family: 'Great Vibes', cursive;
 }
 
-// Fonts
-@font-face{
-	font-family:CaviarBold;
-	src:url(../fuente/CaviarBold.ttf)
-}
-@font-face{
-	font-family:CaviarDreams;
-	src:url(../fuente/CaviarDreams.ttf);
-}
-@mixin font-family-caviar-bold{
-	font-family:'CaviarBold';
-}
-
-@mixin font-family-caviar-dreams{
-	font-family:'CaviarDreams';
-}
-
-@mixin font-family-great-vibes{
- 	font-family: 'Great Vibes', cursive;
-}
-
 
 html,
 body{
@@ -108,7 +87,8 @@ ul, a, p{
 			color: #fff;
 		}
 		.navbar-nav > li > a{
-			margin: 0px 40px;
+			//margin: 0px 40px;
+			margin-right: 35px;
 		}
 	}
 	&.scroll {
